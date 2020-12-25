@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @Styles.Render("~/css/All")
+    @Styles.Render("~/css/jqueryUI")
+    @*<script src="~/Scripts/tinymce.min.js"></script>*@
+
+    @*<script src="~/Scripts/tinyMCE/tinymce.min.js"></script>*@
+
+    <title>Manage Project | Dev99</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        @Html.Action("renderHeader", "TimeStart")
+        <div class="content">
+            @Html.Action("sidebarPartialView", "Project")
+            <div class="main">
+                <div class="content-box">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/js/All")
+    @Scripts.Render("~/js/jqueryUI")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+
+
+</body>
+
+</html>
